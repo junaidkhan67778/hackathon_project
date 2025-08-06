@@ -16,12 +16,17 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 # Environment-based CORS configuration
-allowed_origins = ["http://localhost:8501", "http://127.0.0.1:8501", "*"]
+allowed_origins = [
+    "http://localhost:8501",
+    "http://127.0.0.1:8501",
+    "https://hackathonproject-to7y7xnbyepyehmwme3xry.streamlit.app"
+    ]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST"], 
+    allow_methods=["*"],  # Allow all HTTP methods
     allow_headers=["*"]
 )
 
