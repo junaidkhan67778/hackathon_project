@@ -255,6 +255,10 @@ Keep the reason under 30 words."""
             processing_time=end - start
         )
 
+@app.get("/")
+def root():
+    return {"message": "Backend is alive"}
+
 @app.get("/health")
 async def health_check():
     return {
