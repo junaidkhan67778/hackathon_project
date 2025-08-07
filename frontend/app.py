@@ -307,7 +307,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Backend URL
-BACKEND_URL = "https://hackathon-project-backend-m1qe.onrender.com/"
+BACKEND_URL = "https://hackathon-project-backend-m1qe.onrender.com"
 
 # Header
 st.markdown("""
