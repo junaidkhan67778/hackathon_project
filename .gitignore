@@ -1,1 +1,31 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+
+# Environment variables
 .env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploads or user-generated content
+backend/uploads/
+
+# VS Code / IDE settings
+.vscode/
+.idea/
+
+# Python egg info
+*.egg-info/
+dist/
+build/
+
+# Logs (optional)
+*.log
