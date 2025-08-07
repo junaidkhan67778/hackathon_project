@@ -20,7 +20,7 @@ allowed_origins = [
     "http://localhost:8501",
     "http://127.0.0.1:8501",
     "https://hackathonproject-to7y7xnbyepyehmwme3xry.streamlit.app"
-    ]
+]
 
 app.add_middleware(
     CORSMiddleware,
