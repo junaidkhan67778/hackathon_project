@@ -273,6 +273,16 @@ async def health_check():
         "embedding_model_loaded": embedding_model is not None
     }
 
+@app.post("/webhook")
+async def webhook_listener(request: Request):
+    try:
+        payload = await request.json()
+        logger.info(f"Webhook received: {payload}")
+        return {"status": "success"}
+    except Exception as e:
+        logger.error(f"Webhook error: {e}")
+        raise HTTPException(status_code=400, detail="Invalid payload")
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
